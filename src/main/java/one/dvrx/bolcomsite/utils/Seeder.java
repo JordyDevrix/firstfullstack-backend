@@ -44,8 +44,18 @@ public class Seeder {
                 6
         );
 
+        Product product4 = new Product(
+                "Oxygen Pro Mini",
+                "M-Audio",
+                "midi keyboards",
+                "Mid size keyboard for professional music production",
+                109.00,
+                11
+        );
+
         this.productRepository.save(product1);
         this.productRepository.save(product2);
         this.productRepository.save(product3);
+        this.productRepository.save(product4);
     }
 }
