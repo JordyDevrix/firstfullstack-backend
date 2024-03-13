@@ -20,7 +20,6 @@ public class Seeder {
         Product product1 = new Product(
                 "MPK mini",
                 "AKAI",
-                "midi keyboards",
                 "great beginner's keyboard for lots of settings",
                 94.10,
                 34
@@ -29,7 +28,6 @@ public class Seeder {
         Product product2 = new Product(
                 "Ez creator plus",
                 "Devine",
-                "midi keyboards",
                 "cheap entry keyboard with loads of cool settings",
                 58.55,
                 39
@@ -38,7 +36,6 @@ public class Seeder {
         Product product3 = new Product(
                 "LPK25 MK2",
                 "AKAI",
-                "midi keyboards",
                 "A tiny keyboard practical for travelling",
                 54.00,
                 6
@@ -47,7 +44,6 @@ public class Seeder {
         Product product4 = new Product(
                 "Oxygen Pro Mini",
                 "M-Audio",
-                "midi keyboards",
                 "Mid size keyboard for professional music production",
                 109.00,
                 11

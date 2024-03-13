@@ -14,18 +14,15 @@ public class Product {
 
     private String brand;
 
-    private String category;
-
     private String description;
 
     private double price;
 
     private int quantity;
 
-    public Product(String name, String brand, String category, String description, double price, int quantity) {
+    public Product(String name, String brand, String description, double price, int quantity) {
         this.name = name;
         this.brand = brand;
-        this.category = category;
         this.description = description;
         this.price = price;
         this.quantity = quantity;
@@ -56,14 +53,6 @@ public class Product {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
     }
 
     public String getDescription() {
