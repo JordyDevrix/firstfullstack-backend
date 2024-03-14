@@ -1,12 +1,6 @@
 package one.dvrx.bolcomsite.dto;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.ManyToOne;
-import one.dvrx.bolcomsite.models.Brand;
-import one.dvrx.bolcomsite.models.CartProduct;
-import one.dvrx.bolcomsite.models.Category;
 
 public class ProductDTO {
 

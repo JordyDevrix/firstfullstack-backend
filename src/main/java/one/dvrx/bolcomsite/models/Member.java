@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 
 import java.util.List;
 
-@Entity
+@Entity(name = "member")
 public class Member {
 
     @Id
@@ -24,11 +24,7 @@ public class Member {
 
     private String zipCode;
 
-    private String administrator;
-
-    @OneToOne(mappedBy = "member")
-    @JsonManagedReference
-    private Cart cart;
+    private String customUserRole;
 
     @OneToMany(mappedBy = "member")
     @JsonManagedReference
@@ -41,15 +37,16 @@ public class Member {
         this.lastName = lastName;
         this.streetAddress = streetAddress;
         this.zipCode = zipCode;
-        this.administrator = administrator;
+        this.customUserRole = administrator;
     }
 
     // Foreign key constructor for member
-    public Member(Cart cart) {
-        this.cart = cart;
+    public Member() {
     }
 
-    public Member() {
+    public Member(String email, String password) {
+        this.email = email;
+        this.password = password;
     }
 
     public List<OrderList> getOrders() {
@@ -60,13 +57,6 @@ public class Member {
         this.orders = orders;
     }
 
-    public Cart getCart() {
-        return cart;
-    }
-
-    public void setCart(Cart cart) {
-        this.cart = cart;
-    }
 
     public long getId() {
         return id;
@@ -124,11 +114,11 @@ public class Member {
         this.zipCode = zipCode;
     }
 
-    public String getAdministrator() {
-        return administrator;
+    public String getCustomUserRole() {
+        return customUserRole;
     }
 
-    public void setAdministrator(String administrator) {
-        this.administrator = administrator;
+    public void setCustomUserRole(String administrator) {
+        this.customUserRole = administrator;
     }
 }

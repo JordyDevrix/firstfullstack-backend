@@ -18,7 +18,7 @@ public class CategoryController {
         this.categoryDAO = categoryDAO;
     }
 
-    @GetMapping
+    @GetMapping("/get")
     public ResponseEntity<List<Category>> getCategory() {
         return ResponseEntity.ok(categoryDAO.getAllCategories());
     }

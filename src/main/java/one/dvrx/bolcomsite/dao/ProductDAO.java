@@ -27,8 +27,8 @@ public class ProductDAO {
     }
 
     public List<Product> getAllProducts() {
-        List<Product> products = this.productRepository.findAll();
-        return products;
+        List<Product> product = this.productRepository.findAll();
+        return product;
     }
 
     public void createProduct(ProductDTO productDTO) {
@@ -55,7 +55,22 @@ public class ProductDAO {
         } else {
             throw new ResponseStatusException(
                     HttpStatus.NOT_FOUND,
-                    "Category or brand does not exist"
+                    "Given category or brand does not exist"
+            );
+        }
+    }
+
+    public void updateProductById(long id, ProductDTO productDTO) {
+        Optional<Product> optionalProduct = this.productRepository.findById(id);
+        if (optionalProduct.isPresent()) {
+            Product product = optionalProduct.get();
+            product.setName(productDTO.name);
+            product.setPrice(productDTO.price);
+            this.productRepository.save(product);
+        } else {
+            throw new ResponseStatusException(
+                    HttpStatus.NOT_FOUND,
+                    "The product you're trying to update does not exist"
             );
         }
     }
