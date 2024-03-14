@@ -19,15 +19,16 @@ public class ProductDTO {
 
     public Category category;
 
-
+    public CartProduct cartProduct;
     public Brand brand;
 
-    public ProductDTO(String name, String description, double price, int quantity, Category category, Brand brand) {
+    public ProductDTO(String name, String description, double price, int quantity, Category category, CartProduct cartProduct, Brand brand) {
         this.name = name;
         this.description = description;
         this.price = price;
         this.quantity = quantity;
         this.category = category;
+        this.cartProduct = cartProduct;
         this.brand = brand;
     }
 }
