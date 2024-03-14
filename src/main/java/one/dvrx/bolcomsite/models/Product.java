@@ -28,10 +28,6 @@ public class Product {
     @JsonBackReference
     private Category category;
 
-    @ManyToOne(cascade = CascadeType.MERGE)
-    @JsonBackReference
-    private CartProduct cartProduct;
-
 
     @ManyToOne(cascade = CascadeType.MERGE)
     @JsonBackReference
@@ -61,14 +57,6 @@ public class Product {
     }
 
     public Product() {
-    }
-
-    public CartProduct getCartProduct() {
-        return cartProduct;
-    }
-
-    public void setCartProduct(CartProduct cartProduct) {
-        this.cartProduct = cartProduct;
     }
 
     public Category getCategory() {
