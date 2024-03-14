@@ -1,11 +1,10 @@
 package one.dvrx.bolcomsite.controllers;
 
 import one.dvrx.bolcomsite.dao.CategoryDAO;
+import one.dvrx.bolcomsite.dto.CategoryDTO;
 import one.dvrx.bolcomsite.models.Category;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,5 +21,11 @@ public class CategoryController {
     @GetMapping
     public ResponseEntity<List<Category>> getCategory() {
         return ResponseEntity.ok(categoryDAO.getAllCategories());
+    }
+
+    @PostMapping
+    public ResponseEntity<String> createCategory(@RequestBody CategoryDTO categoryDTO) {
+        this.categoryDAO.createCategory(categoryDTO);
+        return ResponseEntity.ok("Category added");
     }
 }

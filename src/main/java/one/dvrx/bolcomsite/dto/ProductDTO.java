@@ -1,5 +1,6 @@
 package one.dvrx.bolcomsite.dto;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.ManyToOne;
@@ -11,6 +12,7 @@ public class ProductDTO {
 
     public String name;
 
+    @JsonAlias("description_nl")
     public String descriptionNl;
 
     public String descriptionEn;
