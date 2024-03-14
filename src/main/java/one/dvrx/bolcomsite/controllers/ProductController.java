@@ -1,10 +1,10 @@
 package one.dvrx.bolcomsite.controllers;
 
 import one.dvrx.bolcomsite.dao.ProductDAO;
+import one.dvrx.bolcomsite.dto.ProductDTO;
 import one.dvrx.bolcomsite.models.Product;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,8 +19,14 @@ public class ProductController {
     }
 
     @GetMapping
-    public List<Product> getProduct() {
-        return productDAO.getAllProducts();
+    public ResponseEntity<List<Product>> getProduct() {
+        return ResponseEntity.ok(productDAO.getAllProducts());
+    }
+
+    @PostMapping
+    public ResponseEntity<String> createProduct(@RequestBody ProductDTO productDTO) {
+        this.productDAO.createProduct(productDTO);
+        return ResponseEntity.ok("Product added");
     }
 
 }

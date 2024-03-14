@@ -9,27 +9,29 @@ import jakarta.persistence.OneToMany;
 import java.util.List;
 
 @Entity
-public class Category {
+public class Brand {
 
     @Id
     @GeneratedValue
     private long id;
 
-    private String name;
+    private String brand;
 
-    @OneToMany(mappedBy = "category")
+    @OneToMany(mappedBy = "brand")
     @JsonManagedReference
     private List<Product> products;
-    public Category(String name) {
-        this.name = name;
+
+    public Brand(String brand) {
+        this.brand = brand;
     }
 
-    // Foreign key constructor for
-    public Category(List<Product> products) {
+    // Foreign key constructor for brand
+    public Brand(String brand, List<Product> products) {
+        this.brand = brand;
         this.products = products;
     }
 
-    public Category() {
+    public Brand() {
     }
 
     public List<Product> getProducts() {
@@ -48,12 +50,11 @@ public class Category {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getBrand() {
+        return brand;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
-
 }

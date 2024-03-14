@@ -1,5 +1,6 @@
 package one.dvrx.bolcomsite.dao;
 
+import one.dvrx.bolcomsite.dto.ProductDTO;
 import one.dvrx.bolcomsite.models.Product;
 import org.springframework.stereotype.Component;
 
@@ -19,4 +20,15 @@ public class ProductDAO {
         return products;
     }
 
+    public void createProduct(ProductDTO productDTO) {
+        Product product = new Product(
+                productDTO.name,
+                productDTO.description,
+                productDTO.price,
+                productDTO.quantity,
+                productDTO.category,
+                productDTO.brand
+        );
+        this.productRepository.save(product);
+    }
 }
