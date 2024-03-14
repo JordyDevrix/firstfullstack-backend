@@ -15,28 +15,33 @@ public class ProductDTO {
     @JsonAlias("description_nl")
     public String descriptionNl;
 
+    @JsonAlias("description_en")
     public String descriptionEn;
 
+    @JsonAlias("description_fr")
     public String descriptionFr;
 
     public double price;
 
     public int quantity;
 
-    public Category category;
+    @JsonAlias("category_id")
+    public long categoryId;
 
-    public CartProduct cartProduct;
-    public Brand brand;
+//    @JsonAlias("cart_product")
+//    public CartProduct cartProduct;
 
-    public ProductDTO(String name, String descriptionNl, String descriptionEn, String descriptionFr, double price, int quantity, Category category, CartProduct cartProduct, Brand brand) {
+    @JsonAlias("brand_id")
+    public long brandId;
+
+    public ProductDTO(String name, String descriptionNl, String descriptionEn, String descriptionFr, double price, int quantity, long categoryId, long brandId) {
         this.name = name;
         this.descriptionNl = descriptionNl;
         this.descriptionEn = descriptionEn;
         this.descriptionFr = descriptionFr;
         this.price = price;
         this.quantity = quantity;
-        this.category = category;
-        this.cartProduct = cartProduct;
-        this.brand = brand;
+        this.categoryId = categoryId;
+        this.brandId = brandId;
     }
 }

@@ -10,8 +10,10 @@ public class CategoryDTO {
     @JsonAlias("name")
     public String name;
 
-
     public CategoryDTO(String name) {
         this.name = name;
+    }
+
+    public CategoryDTO() {
     }
 }

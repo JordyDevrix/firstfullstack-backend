@@ -21,10 +21,7 @@ public class CategoryDAO {
     }
 
     public void createCategory(CategoryDTO categoryDTO) {
-        Category category = new Category(
-                categoryDTO.name
-        );
+        Category category = new Category(categoryDTO.name);
         this.categoryRepository.save(category);
-
     }
 }
