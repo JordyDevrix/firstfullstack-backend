@@ -11,7 +11,11 @@ public class ProductDTO {
 
     public String name;
 
-    public String description;
+    public String descriptionNl;
+
+    public String descriptionEn;
+
+    public String descriptionFr;
 
     public double price;
 
@@ -22,9 +26,11 @@ public class ProductDTO {
     public CartProduct cartProduct;
     public Brand brand;
 
-    public ProductDTO(String name, String description, double price, int quantity, Category category, CartProduct cartProduct, Brand brand) {
+    public ProductDTO(String name, String descriptionNl, String descriptionEn, String descriptionFr, double price, int quantity, Category category, CartProduct cartProduct, Brand brand) {
         this.name = name;
-        this.description = description;
+        this.descriptionNl = descriptionNl;
+        this.descriptionEn = descriptionEn;
+        this.descriptionFr = descriptionFr;
         this.price = price;
         this.quantity = quantity;
         this.category = category;

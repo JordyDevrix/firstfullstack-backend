@@ -23,7 +23,9 @@ public class ProductDAO {
     public void createProduct(ProductDTO productDTO) {
         Product product = new Product(
                 productDTO.name,
-                productDTO.description,
+                productDTO.descriptionNl,
+                productDTO.descriptionEn,
+                productDTO.descriptionFr,
                 productDTO.price,
                 productDTO.quantity,
                 productDTO.category,

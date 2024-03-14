@@ -35,7 +35,9 @@ public class Seeder {
 
         Product product1 = new Product(
                 "MPK mini",
-                "great beginner's keyboard for lots of settings",
+                "geweldig beginners keyboard met veel instellingen",
+                "great beginner's keyboard with lots of settings",
+                "une bonne keyboard debutant avec noumbreux parametres",
                 94.10,
                 34,
                 category1,
@@ -44,7 +46,9 @@ public class Seeder {
 
         Product product2 = new Product(
                 "Ez creator plus",
+                "een goedkoop beginners keyboard met veel coole settings",
                 "cheap entry keyboard with loads of cool settings",
+                "une bonne keyboard pas cher avec beaucoup des parametres",
                 58.55,
                 39,
                 category1,
@@ -53,7 +57,9 @@ public class Seeder {
 
         Product product3 = new Product(
                 "LPK25 MK2",
+                "Een klein keyboard handig voor onderweg",
                 "A tiny keyboard practical for travelling",
+                "Une petit keyboard tres utile pour voyager",
                 54.00,
                 6,
                 category2,
@@ -62,7 +68,9 @@ public class Seeder {
 
         Product product4 = new Product(
                 "Oxygen Pro Mini",
+                "Een middelgroot keyboard voor de professionele producer",
                 "Mid size keyboard for professional music production",
+                "Une keyboard pour les producer avec beaucoup de l'experience",
                 109.00,
                 11,
                 category1,

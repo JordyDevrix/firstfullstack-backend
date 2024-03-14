@@ -14,7 +14,11 @@ public class Product {
 
     private String name;
 
-    private String description;
+    private String description_nl;
+
+    private String description_en;
+
+    private String description_fr;
 
     private double price;
 
@@ -33,17 +37,23 @@ public class Product {
     @JsonBackReference
     private Brand brand;
 
-    public Product(String name, String description, double price, int quantity) {
+    public Product(String name, String description_nl, String description_en, String description_fr, double price, int quantity) {
         this.name = name;
-        this.description = description;
+        this.description_nl = description_nl;
+        this.description_en = description_en;
+        this.description_fr = description_fr;
         this.price = price;
         this.quantity = quantity;
     }
 
     // Foreign key constructor for Product
-    public Product(String name, String description, double price, int quantity, Category category, Brand brand) {
+
+
+    public Product(String name, String description_nl, String description_en, String description_fr, double price, int quantity, Category category, Brand brand) {
         this.name = name;
-        this.description = description;
+        this.description_nl = description_nl;
+        this.description_en = description_en;
+        this.description_fr = description_fr;
         this.price = price;
         this.quantity = quantity;
         this.category = category;
@@ -93,12 +103,28 @@ public class Product {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
+    public String getDescription_nl() {
+        return description_nl;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDescription_nl(String description_nl) {
+        this.description_nl = description_nl;
+    }
+
+    public String getDescription_en() {
+        return description_en;
+    }
+
+    public void setDescription_en(String description_en) {
+        this.description_en = description_en;
+    }
+
+    public String getDescription_fr() {
+        return description_fr;
+    }
+
+    public void setDescription_fr(String description_fr) {
+        this.description_fr = description_fr;
     }
 
     public double getPrice() {
