@@ -36,6 +36,12 @@ public class OrderList {
         this.orderedProduct = orderedProduct;
     }
 
+    public OrderList(String date, double price, Member member) {
+        this.date = date;
+        this.price = price;
+        this.member = member;
+    }
+
     public OrderList() {
     }
 

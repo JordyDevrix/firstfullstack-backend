@@ -16,25 +16,22 @@ public class Member {
 
     private String password;
 
-    private String firstName;
-
-    private String lastName;
+    private String name;
 
     private String streetAddress;
 
     private String zipCode;
 
-    private String customUserRole;
+    private boolean customUserRole;
 
     @OneToMany(mappedBy = "member")
     @JsonManagedReference
     private List<OrderList> orders;
 
-    public Member(String email, String password, String firstName, String lastName, String streetAddress, String zipCode, String administrator) {
+    public Member(String email, String password, String name, String streetAddress, String zipCode, boolean administrator) {
         this.email = email;
         this.password = password;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.name = name;
         this.streetAddress = streetAddress;
         this.zipCode = zipCode;
         this.customUserRole = administrator;
@@ -83,19 +80,11 @@ public class Member {
     }
 
     public String getFirstName() {
-        return firstName;
+        return name;
     }
 
     public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+        this.name = firstName;
     }
 
     public String getStreetAddress() {
@@ -114,11 +103,11 @@ public class Member {
         this.zipCode = zipCode;
     }
 
-    public String getCustomUserRole() {
+    public boolean getCustomUserRole() {
         return customUserRole;
     }
 
-    public void setCustomUserRole(String administrator) {
+    public void setCustomUserRole(boolean administrator) {
         this.customUserRole = administrator;
     }
 }

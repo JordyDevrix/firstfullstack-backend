@@ -26,6 +26,13 @@ public class OrderedProduct {
         this.price = price;
     }
 
+    public OrderedProduct(String name, String brand, double price, OrderList orderList) {
+        this.name = name;
+        this.brand = brand;
+        this.price = price;
+        this.orderList = orderList;
+    }
+
     // Foreign key constructor for OrderedProduct
     public OrderedProduct(OrderList orderList) {
         this.orderList = orderList;

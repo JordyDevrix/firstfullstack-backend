@@ -1,11 +1,7 @@
 package one.dvrx.bolcomsite.utils;
 
-import one.dvrx.bolcomsite.dao.BrandRepository;
-import one.dvrx.bolcomsite.dao.CategoryRepository;
-import one.dvrx.bolcomsite.dao.ProductRepository;
-import one.dvrx.bolcomsite.models.Brand;
-import one.dvrx.bolcomsite.models.Category;
-import one.dvrx.bolcomsite.models.Product;
+import one.dvrx.bolcomsite.dao.*;
+import one.dvrx.bolcomsite.models.*;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
@@ -16,11 +12,18 @@ public class Seeder {
     private ProductRepository productRepository;
     private CategoryRepository categoryRepository;
     private BrandRepository brandRepository;
+    private OrderListRepository orderListRepository;
+    private MemberRepository memberRepository;
 
-    public Seeder(ProductRepository productRepository, CategoryRepository categoryRepository, BrandRepository brandRepository) {
+    private OrderedProductRepository orderedProductRepository;
+
+    public Seeder(ProductRepository productRepository, CategoryRepository categoryRepository, BrandRepository brandRepository, OrderListRepository orderListRepository, MemberRepository memberRepository, OrderedProductRepository orderedProductRepository) {
         this.productRepository = productRepository;
         this.categoryRepository = categoryRepository;
         this.brandRepository = brandRepository;
+        this.orderListRepository = orderListRepository;
+        this.memberRepository = memberRepository;
+        this.orderedProductRepository = orderedProductRepository;
     }
 
     @EventListener
@@ -81,5 +84,20 @@ public class Seeder {
         this.productRepository.save(product2);
         this.productRepository.save(product3);
         this.productRepository.save(product4);
+
+        Member member1 = new Member(
+                "2109jordy2241@gmail.com",
+                "@J2o0r0d4y",
+                "Jordy",
+                "hoogheemraadstraat 42",
+                "2241CH",
+                false);
+        this.memberRepository.save(member1);
+
+        OrderList orderList1 = new OrderList("10-12-2024", 2000, member1);
+        this.orderListRepository.save(orderList1);
+
+        OrderedProduct orderedProduct1 = new OrderedProduct("MPK", "AKAI", 109, orderList1);
+        this.orderedProductRepository.save(orderedProduct1);
     }
 }

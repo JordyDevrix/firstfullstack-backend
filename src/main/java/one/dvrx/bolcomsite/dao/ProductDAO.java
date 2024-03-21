@@ -27,8 +27,8 @@ public class ProductDAO {
     }
 
     public List<Product> getAllProducts() {
-        List<Product> product = this.productRepository.findAll();
-        return product;
+        List<Product> products = this.productRepository.findAll();
+        return products;
     }
 
     public void createProduct(ProductDTO productDTO) {
