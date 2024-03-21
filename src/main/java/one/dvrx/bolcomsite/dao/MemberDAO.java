@@ -17,9 +17,8 @@ public class MemberDAO {
         this.userRepository = userRepository;
     }
 
-    public List<Member> getAllMembersOrders(Member member) {
+    public List<Member> getAllMembersOrders() {
         List<Member> members = this.memberRepository.findAll();
-        System.out.println(member);
         return members;
     }
 

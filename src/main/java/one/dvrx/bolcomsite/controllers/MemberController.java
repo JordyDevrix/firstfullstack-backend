@@ -1,6 +1,7 @@
 package one.dvrx.bolcomsite.controllers;
 
 import one.dvrx.bolcomsite.dao.MemberDAO;
+import one.dvrx.bolcomsite.dao.MemberRepository;
 import one.dvrx.bolcomsite.models.Member;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -26,7 +27,7 @@ public class MemberController {
 //    }
 
     @GetMapping("/get_orders")
-    public ResponseEntity<List<Member>> getMemberOrders(@AuthenticationPrincipal Member member) {
-        return ResponseEntity.ok(memberDAO.getAllMembersOrders(member));
+    public ResponseEntity<List<Member>> getMemberOrders() {
+        return ResponseEntity.ok(memberDAO.getAllMembersOrders());
     }
 }
