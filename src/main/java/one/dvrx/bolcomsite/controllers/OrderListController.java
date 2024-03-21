@@ -20,10 +20,15 @@ public class OrderListController {
         this.orderListDAO = orderListDAO;
     }
 
-    @GetMapping("/get/{id}")
-    public ResponseEntity<List<OrderList>> getOrderList(@PathVariable long id) {
-        return ResponseEntity.ok(orderListDAO.getAllOrderLists(id));
+    @GetMapping("/get")
+    public ResponseEntity<List<OrderList>> getOrderList() {
+        return ResponseEntity.ok(orderListDAO.getAllOrderLists());
     }
+
+//    @GetMapping("/get/{id}")
+//    public ResponseEntity<List<OrderList>> getOrderListByMember(@PathVariable long id) {
+//        return ResponseEntity.ok(orderListDAO.getAllOrderListsByMember(id));
+//    }
 
 
 }

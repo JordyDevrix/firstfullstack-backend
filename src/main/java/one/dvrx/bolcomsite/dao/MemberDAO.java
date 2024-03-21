@@ -10,8 +10,17 @@ public class MemberDAO {
 
     private MemberRepository memberRepository;
 
-    public MemberDAO(MemberRepository memberRepository) {
+    private UserRepository userRepository;
+
+    public MemberDAO(MemberRepository memberRepository, UserRepository userRepository) {
         this.memberRepository = memberRepository;
+        this.userRepository = userRepository;
+    }
+
+    public List<Member> getAllMembersOrders(Member member) {
+        List<Member> members = this.memberRepository.findAll();
+        System.out.println(member);
+        return members;
     }
 
 //    public List<Member> getAllMembers() {

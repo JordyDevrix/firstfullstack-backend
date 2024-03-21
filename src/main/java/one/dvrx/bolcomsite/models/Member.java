@@ -28,13 +28,12 @@ public class Member {
     @JsonManagedReference
     private List<OrderList> orders;
 
-    public Member(String email, String password, String name, String streetAddress, String zipCode, boolean administrator) {
+    public Member(String email, String password, String name, String streetAddress, String zipCode) {
         this.email = email;
         this.password = password;
         this.name = name;
         this.streetAddress = streetAddress;
         this.zipCode = zipCode;
-        this.customUserRole = administrator;
     }
 
     // Foreign key constructor for member
@@ -79,12 +78,12 @@ public class Member {
         this.password = password;
     }
 
-    public String getFirstName() {
+    public String getName() {
         return name;
     }
 
-    public void setFirstName(String firstName) {
-        this.name = firstName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getStreetAddress() {

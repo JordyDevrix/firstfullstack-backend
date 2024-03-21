@@ -21,10 +21,16 @@ public class OrderListDAO {
     }
 
 
-    public List<OrderList> getAllOrderLists(long id) {
-        Optional<Member> member = this.memberRepository.findById(id);
-        System.out.println(member.get());
+    public List<OrderList> getAllOrderLists() {
         List<OrderList> orderLists = this.orderListRepository.findAll();
+        System.out.println("hier ook");
         return orderLists;
     }
+
+//    public List<OrderList> getAllOrderListsByMember(long id) {
+//        List<OrderList> orderLists = this.orderListRepository.findAll();
+//        Optional<Member> member = this.memberRepository.findById(id);
+//        System.out.println("hier");
+//        return orderLists;
+//    }
 }

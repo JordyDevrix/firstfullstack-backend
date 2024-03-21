@@ -90,8 +90,7 @@ public class Seeder {
                 "@J2o0r0d4y",
                 "Jordy",
                 "hoogheemraadstraat 42",
-                "2241CH",
-                false);
+                "2241CH");
         this.memberRepository.save(member1);
 
         OrderList orderList1 = new OrderList("10-12-2024", 2000, member1);

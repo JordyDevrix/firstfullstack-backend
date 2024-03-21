@@ -1,9 +1,11 @@
 package one.dvrx.bolcomsite.controllers;
 
 import one.dvrx.bolcomsite.config.JWTUtil;
+import one.dvrx.bolcomsite.dao.MemberDAO;
 import one.dvrx.bolcomsite.dao.UserRepository;
 import one.dvrx.bolcomsite.dto.AuthenticationDTO;
 import one.dvrx.bolcomsite.dto.LoginResponse;
+import one.dvrx.bolcomsite.dto.MemberDTO;
 import one.dvrx.bolcomsite.models.Member;
 import one.dvrx.bolcomsite.services.CredentialValidator;
 import org.springframework.http.HttpStatus;
@@ -28,13 +30,16 @@ public class AuthController {
     private final PasswordEncoder passwordEncoder;
     private CredentialValidator validator;
 
+    private MemberDAO memberDAO;
+
     public AuthController(UserRepository userDAO, JWTUtil jwtUtil, AuthenticationManager authManager,
-                          PasswordEncoder passwordEncoder, CredentialValidator validator) {
+                          PasswordEncoder passwordEncoder, CredentialValidator validator, MemberDAO memberDAO) {
         this.userDAO = userDAO;
         this.jwtUtil = jwtUtil;
         this.authManager = authManager;
         this.passwordEncoder = passwordEncoder;
         this.validator = validator;
+        this.memberDAO = memberDAO;
     }
 
     @PostMapping("/register")
@@ -60,7 +65,13 @@ public class AuthController {
         }
         String encodedPassword = passwordEncoder.encode(authenticationDTO.password);
 
-        Member registerdCustomUser = new Member(authenticationDTO.email, encodedPassword);
+        Member registerdCustomUser = new Member(
+                authenticationDTO.email,
+                encodedPassword,
+                authenticationDTO.name,
+                authenticationDTO.streetAddress,
+                authenticationDTO.zipCode
+        );
         userDAO.save(registerdCustomUser);
         String token = jwtUtil.generateToken(registerdCustomUser.getEmail());
         LoginResponse loginResponse = new LoginResponse(registerdCustomUser.getEmail(), token);
