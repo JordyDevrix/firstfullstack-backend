@@ -17,13 +17,9 @@ public class MemberDAO {
         this.userRepository = userRepository;
     }
 
-    public List<Member> getAllMembersOrders() {
-        List<Member> members = this.memberRepository.findAll();
+    public Member getCurrentMemberId(String email) {
+        Member members = this.userRepository.findByEmail(email);
         return members;
     }
 
-//    public List<Member> getAllMembers() {
-//        List<Member> members = this.memberRepository.findAll();
-//        return members;
-//    }
 }

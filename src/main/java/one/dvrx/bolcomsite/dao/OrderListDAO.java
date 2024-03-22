@@ -18,13 +18,10 @@ public class OrderListDAO {
 
     private UserRepository userRepository;
 
-    private JWTUtil jwtUtil;
-
-    public OrderListDAO(OrderListRepository orderListRepository, MemberRepository memberRepository, UserRepository userRepository, JWTUtil jwtUtil) {
+    public OrderListDAO(OrderListRepository orderListRepository, MemberRepository memberRepository, UserRepository userRepository) {
         this.orderListRepository = orderListRepository;
         this.memberRepository = memberRepository;
         this.userRepository = userRepository;
-        this.jwtUtil = jwtUtil;
     }
 
     public List<OrderList> getAllOrderLists() {
@@ -35,8 +32,7 @@ public class OrderListDAO {
 
     public List<OrderList> getAllOrderListsByMember() {
         List<OrderList> orderLists = this.orderListRepository.findAll();
-        Member member = this.userRepository.findByEmail("email");
-        System.out.println(member.getName());
+
         return orderLists;
     }
 }
