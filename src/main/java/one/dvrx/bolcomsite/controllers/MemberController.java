@@ -24,4 +24,6 @@ public class MemberController {
     public ResponseEntity<Member> getMemberOrders(@PathVariable String email) {
         return ResponseEntity.ok(memberDAO.getCurrentMemberId(email));
     }
+
+
 }
