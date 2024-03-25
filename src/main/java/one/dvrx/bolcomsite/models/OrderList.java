@@ -45,6 +45,9 @@ public class OrderList {
     public OrderList() {
     }
 
+    public OrderList(String date, double price, long id) {
+    }
+
     public long getId() {
         return id;
     }

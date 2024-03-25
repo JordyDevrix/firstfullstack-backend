@@ -1,10 +1,15 @@
 package one.dvrx.bolcomsite.controllers;
 
 import one.dvrx.bolcomsite.dao.OrderedProductDAO;
+import one.dvrx.bolcomsite.dto.OrderedProductDTO;
+import one.dvrx.bolcomsite.models.Member;
 import one.dvrx.bolcomsite.models.OrderedProduct;
+import one.dvrx.bolcomsite.services.UserService;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
 import java.util.Optional;
 
 @RestController
@@ -14,8 +19,12 @@ public class OrderedProductController {
 
     private OrderedProductDAO orderedProductDAO;
 
-    public OrderedProductController(OrderedProductDAO orderedProductDAO) {
+    private UserService userService;
+
+
+    public OrderedProductController(OrderedProductDAO orderedProductDAO, UserService userService) {
         this.orderedProductDAO = orderedProductDAO;
+        this.userService = userService;
     }
 
     @GetMapping("/get/{id}")

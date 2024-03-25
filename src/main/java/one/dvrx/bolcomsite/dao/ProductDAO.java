@@ -42,8 +42,6 @@ public class ProductDAO {
             Product product = new Product(
                     productDTO.name,
                     productDTO.descriptionNl,
-                    productDTO.descriptionEn,
-                    productDTO.descriptionFr,
                     productDTO.price,
                     productDTO.quantity,
                     category,
