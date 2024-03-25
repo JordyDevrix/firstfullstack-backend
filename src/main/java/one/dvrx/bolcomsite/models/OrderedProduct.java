@@ -80,4 +80,10 @@ public class OrderedProduct {
     public void setPrice(double price) {
         this.price = price;
     }
+
+    public void setOrder(OrderList order) {
+    }
+
+    public void setOrderListId(long id) {
+    }
 }

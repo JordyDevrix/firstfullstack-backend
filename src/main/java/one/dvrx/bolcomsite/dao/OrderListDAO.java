@@ -5,6 +5,7 @@ import one.dvrx.bolcomsite.dto.MemberDTO;
 import one.dvrx.bolcomsite.dto.OrderListDTO;
 import one.dvrx.bolcomsite.models.Member;
 import one.dvrx.bolcomsite.models.OrderList;
+import one.dvrx.bolcomsite.models.OrderedProduct;
 import org.hibernate.query.Order;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
@@ -21,10 +22,13 @@ public class OrderListDAO {
 
     private UserRepository userRepository;
 
-    public OrderListDAO(OrderListRepository orderListRepository, MemberRepository memberRepository, UserRepository userRepository) {
+    private OrderedProductRepository orderedProductRepository;
+
+    public OrderListDAO(OrderListRepository orderListRepository, MemberRepository memberRepository, UserRepository userRepository, OrderedProductRepository orderedProductRepository) {
         this.orderListRepository = orderListRepository;
         this.memberRepository = memberRepository;
         this.userRepository = userRepository;
+        this.orderedProductRepository = orderedProductRepository;
     }
 
     public List<OrderList> getAllOrderLists() {
@@ -51,5 +55,16 @@ public class OrderListDAO {
         OrderList order = new OrderList(orderListDTO.date, orderListDTO.price);
         order.setMember(member1);
         this.orderListRepository.save(order);
+        for (OrderedProduct orderedProduct : orderListDTO.orderedProducts) {
+            orderedProduct.setOrder(order);
+            System.out.println(order.getId());
+            OrderedProduct orderedProduct1 = new OrderedProduct(
+                    orderedProduct.getName(),
+                    orderedProduct.getBrand(),
+                    orderedProduct.getPrice(),
+                    order
+                    );
+            this.orderedProductRepository.save(orderedProduct1);
+        }
     }
 }
