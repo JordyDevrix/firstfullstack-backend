@@ -25,6 +25,11 @@ public class ProductController {
         return ResponseEntity.ok(productDAO.getAllProducts());
     }
 
+    @GetMapping("/get/{id}")
+    public ResponseEntity<Product> getProductById(@PathVariable long id) {
+        return ResponseEntity.ok(productDAO.getAllProductsById(id));
+    }
+
     @PostMapping
     public ResponseEntity<String> createProduct(@RequestBody ProductDTO productDTO) {
         this.productDAO.createProduct(productDTO);

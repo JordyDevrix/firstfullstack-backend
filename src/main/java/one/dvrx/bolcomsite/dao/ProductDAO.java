@@ -72,4 +72,17 @@ public class ProductDAO {
             );
         }
     }
+
+    public Product getAllProductsById(long id) {
+        Optional<Product> optionalProduct = this.productRepository.findById(id);
+        if (optionalProduct.isPresent()) {
+            Product product = optionalProduct.get();
+            return product;
+        } else {
+            throw new ResponseStatusException(
+                    HttpStatus.NOT_FOUND,
+                    "Product does not exist"
+            );
+        }
+    }
 }
