@@ -31,12 +31,6 @@ public class OrderListDAO {
         this.orderedProductRepository = orderedProductRepository;
     }
 
-    public List<OrderList> getAllOrderLists() {
-        List<OrderList> orderLists = this.orderListRepository.findAll();
-        System.out.println("hier ook");
-        return orderLists;
-    }
-
     public List<OrderList> getAllOrderListsByMember(UserDetails member) {
         System.out.println(member.getUsername());
         Member member1 = userRepository.findByEmail(member.getUsername());

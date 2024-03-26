@@ -20,8 +20,4 @@ public class OrderedProductDAO {
         Optional<OrderedProduct> optionalOrderedProducts = this.orderedProductRepository.findById(id);
         return optionalOrderedProducts;
     }
-
-    public void addOrderedProduct(String email, OrderedProductDTO orderedProductDTO) {
-
-    }
 }
