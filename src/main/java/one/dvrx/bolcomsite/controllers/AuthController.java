@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 @RestController
-@CrossOrigin(origins = {"http://localhost:4200", "http://s1151166.student.inf-hsleiden.nl:1151166"})
+@CrossOrigin(origins = {"http://localhost:4200", "http://s1151166.student.inf-hsleiden.nl:11166"})
 @RequestMapping("/auth")
 public class AuthController {
 
@@ -41,6 +41,7 @@ public class AuthController {
     }
 
     @PostMapping("/register")
+    @CrossOrigin(origins = {"http://localhost:4200", "http://s1151166.student.inf-hsleiden.nl:11166"})
     public ResponseEntity<LoginResponse> register(@RequestBody AuthenticationDTO authenticationDTO) {
         if (!validator.isValidEmail(authenticationDTO.email)) {
             throw new ResponseStatusException(
@@ -77,6 +78,7 @@ public class AuthController {
     }
 
     @PostMapping("/login")
+    @CrossOrigin(origins = {"http://localhost:4200", "http://s1151166.student.inf-hsleiden.nl:11166"})
     public ResponseEntity<LoginResponse> login(@RequestBody AuthenticationDTO body) {
         try {
             UsernamePasswordAuthenticationToken authInputToken =

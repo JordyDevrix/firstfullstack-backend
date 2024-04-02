@@ -13,7 +13,7 @@ import java.security.Principal;
 import java.util.Optional;
 
 @RestController
-@CrossOrigin(origins = {"http://localhost:4200", "http://s1151166.student.inf-hsleiden.nl:1151166"})
+@CrossOrigin(origins = {"http://localhost:4200", "http://s1151166.student.inf-hsleiden.nl:11166"})
 @RequestMapping("/orderedproduct")
 public class OrderedProductController {
 
