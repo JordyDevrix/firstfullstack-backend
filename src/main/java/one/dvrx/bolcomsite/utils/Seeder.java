@@ -62,7 +62,8 @@ public class Seeder {
                 94.10,
                 34,
                 category1,
-                brand1
+                brand1,
+                "https://m.media-amazon.com/images/I/717qmGlA7ZL._AC_UF894,1000_QL80_.jpg"
         );
 
         Product product2 = new Product(
@@ -71,7 +72,8 @@ public class Seeder {
                 58.55,
                 39,
                 category1,
-                brand5
+                brand5,
+                "https://media.s-bol.com/46XG70m3KR21/EyWvL0/550x228.jpg"
         );
 
         Product product3 = new Product(
@@ -80,7 +82,8 @@ public class Seeder {
                 54.00,
                 6,
                 category2,
-                brand1
+                brand1,
+                "https://static.bax-shop.nl/image/product/1021882/3865776/47d49077/1664458409akai_LPK25_mk2_01.jpg"
         );
 
         Product product4 = new Product(
@@ -89,7 +92,8 @@ public class Seeder {
                 109.00,
                 11,
                 category1,
-                brand3
+                brand3,
+                "https://m.media-amazon.com/images/I/81rPqm+Wl6S._AC_UF894,1000_QL80_.jpg"
         );
 
         Product product5 = new Product(
@@ -98,7 +102,8 @@ public class Seeder {
                 159.00,
                 11,
                 category1,
-                brand1
+                brand1,
+                "https://m.media-amazon.com/images/I/71wPxxzlLHL._AC_UF894,1000_QL80_.jpg"
         );
 
         Product product6 = new Product(
@@ -107,7 +112,8 @@ public class Seeder {
                 16000.00,
                 11,
                 category2,
-                brand4
+                brand4,
+                "https://iear.nl/wp-content/uploads/2023/07/prd125826-1024x822.jpg"
         );
 
         Product product7 = new Product(
@@ -116,7 +122,8 @@ public class Seeder {
                 999.00,
                 11,
                 category2,
-                brand6
+                brand6,
+                "https://bartelstilburg.nl/wp-content/uploads/2021/02/Phantom-Il-95db-5.png"
         );
 
         Product product8 = new Product(
@@ -125,7 +132,8 @@ public class Seeder {
                 100000.00,
                 11,
                 category2,
-                brand4
+                brand4,
+                "https://audiosolutions.net.au/wp-content/uploads/2023/10/bowers_wilkins_Nautilus-White-Beauty-1.jpg"
         );
 
         Product product9 = new Product(
@@ -134,7 +142,8 @@ public class Seeder {
                 249998.00,
                 11,
                 category2,
-                brand7
+                brand7,
+                "https://www.overtureav.com/wp-content/uploads/2021/10/stella-blue.jpg"
         );
 
         Product product10 = new Product(
@@ -143,7 +152,8 @@ public class Seeder {
                 27500.00,
                 11,
                 category2,
-                brand4
+                brand4,
+                "https://iear.nl/wp-content/uploads/2023/07/prd125697.jpg"
         );
 
 
@@ -157,20 +167,5 @@ public class Seeder {
         this.productRepository.save(product8);
         this.productRepository.save(product9);
         this.productRepository.save(product10);
-
-
-        Member member1 = new Member(
-                "2109jordy2241@gmail.com",
-                "@J2o0r0d4y",
-                "Jordy",
-                "hoogheemraadstraat 42",
-                "2241CH");
-        this.memberRepository.save(member1);
-
-        OrderList orderList1 = new OrderList("10-12-2024", 2000, member1);
-        this.orderListRepository.save(orderList1);
-
-        OrderedProduct orderedProduct1 = new OrderedProduct("MPK", "AKAI", 109, orderList1);
-        this.orderedProductRepository.save(orderedProduct1);
     }
 }

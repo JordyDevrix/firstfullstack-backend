@@ -14,7 +14,7 @@ public class Product {
 
     private String name;
 
-    private String description_nl;
+    private String description;
 
     private double price;
 
@@ -29,23 +29,31 @@ public class Product {
     @JsonBackReference
     private Brand brand;
 
-    public Product(String name, String description_nl, double price, int quantity) {
+
+    private String url;
+
+
+    public Product(String name, String description, double price, int quantity, String url, Brand brand, Category category) {
         this.name = name;
-        this.description_nl = description_nl;
+        this.description = description;
+        this.brand = brand;
+        this.category = category;
         this.price = price;
         this.quantity = quantity;
+        this.url = url;
     }
 
     // Foreign key constructor for Product
 
 
-    public Product(String name, String description_nl, double price, int quantity, Category category, Brand brand) {
+    public Product(String name, String description, double price, int quantity, Category category, Brand brand, String url) {
         this.name = name;
-        this.description_nl = description_nl;
+        this.description = description;
         this.price = price;
         this.quantity = quantity;
         this.category = category;
         this.brand = brand;
+        this.url = url;
     }
 
     public Product() {
@@ -83,14 +91,6 @@ public class Product {
         this.name = name;
     }
 
-    public String getDescription_nl() {
-        return description_nl;
-    }
-
-    public void setDescription_nl(String description_nl) {
-        this.description_nl = description_nl;
-    }
-
     public double getPrice() {
         return price;
     }
@@ -105,5 +105,21 @@ public class Product {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 }

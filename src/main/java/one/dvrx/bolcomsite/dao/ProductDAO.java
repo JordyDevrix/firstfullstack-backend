@@ -28,6 +28,7 @@ public class ProductDAO {
 
     public List<Product> getAllProducts() {
         List<Product> products = this.productRepository.findAll();
+        System.out.println(products);
         return products;
     }
 
@@ -41,11 +42,12 @@ public class ProductDAO {
 
             Product product = new Product(
                     productDTO.name,
-                    productDTO.descriptionNl,
+                    productDTO.description,
                     productDTO.price,
                     productDTO.quantity,
                     category,
-                    brand
+                    brand,
+                    productDTO.url
             );
 
             this.productRepository.save(product);

@@ -6,8 +6,8 @@ public class ProductDTO {
 
     public String name;
 
-    @JsonAlias("description_nl")
-    public String descriptionNl;
+    @JsonAlias("description")
+    public String description;
 
     public double price;
 
@@ -22,12 +22,15 @@ public class ProductDTO {
     @JsonAlias("brand_id")
     public long brandId;
 
-    public ProductDTO(String name, String descriptionNl, double price, int quantity, long categoryId, long brandId) {
+    public String url;
+
+    public ProductDTO(String name, String description, double price, int quantity, long categoryId, long brandId, String url) {
         this.name = name;
-        this.descriptionNl = descriptionNl;
+        this.description = description;
         this.price = price;
         this.quantity = quantity;
         this.categoryId = categoryId;
         this.brandId = brandId;
+        this.url = url;
     }
 }
