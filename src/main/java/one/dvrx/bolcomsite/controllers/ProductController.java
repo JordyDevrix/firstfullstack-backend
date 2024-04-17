@@ -2,6 +2,8 @@ package one.dvrx.bolcomsite.controllers;
 
 import one.dvrx.bolcomsite.dao.ProductDAO;
 import one.dvrx.bolcomsite.dto.ProductDTO;
+import one.dvrx.bolcomsite.models.Brand;
+import one.dvrx.bolcomsite.models.Category;
 import one.dvrx.bolcomsite.models.Product;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -28,6 +30,16 @@ public class ProductController {
     @GetMapping("/get/{id}")
     public ResponseEntity<Product> getProductById(@PathVariable long id) {
         return ResponseEntity.ok(productDAO.getAllProductsById(id));
+    }
+
+    @GetMapping("/get/category/{id}")
+    public ResponseEntity<Category> getProductCategoryById(@PathVariable long id) {
+        return ResponseEntity.ok(productDAO.getProductCategoryById(id));
+    }
+
+    @GetMapping("/get/brand/{id}")
+    public ResponseEntity<Brand> getProductBrandById(@PathVariable long id) {
+        return ResponseEntity.ok(productDAO.getProductBrandById(id));
     }
 
     @PostMapping

@@ -39,6 +39,7 @@ public class SecurityConfig {
                     .requestMatchers("/auth/**").permitAll()
                     .requestMatchers("/*/get").permitAll()
                     .requestMatchers("/*/get/*").permitAll()
+                    .requestMatchers("/*/get/*/*").permitAll()
                     .requestMatchers("/error").anonymous()
                     .anyRequest().authenticated()
                 )

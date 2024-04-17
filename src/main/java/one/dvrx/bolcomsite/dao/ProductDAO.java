@@ -87,4 +87,30 @@ public class ProductDAO {
             );
         }
     }
+
+    public Category getProductCategoryById(long id) {
+        Optional<Product> optionalProduct = this.productRepository.findById(id);
+        if (optionalProduct.isPresent()) {
+            Category category = optionalProduct.get().getCategory();
+            return category;
+        } else {
+            throw new ResponseStatusException(
+                    HttpStatus.NOT_FOUND,
+                    "Product does not exist"
+            );
+        }
+    }
+
+    public Brand getProductBrandById(long id) {
+        Optional<Product> optionalProduct = this.productRepository.findById(id);
+        if (optionalProduct.isPresent()) {
+            Brand brand = optionalProduct.get().getBrand();
+            return brand;
+        } else {
+            throw new ResponseStatusException(
+                    HttpStatus.NOT_FOUND,
+                    "Product does not exist"
+            );
+        }
+    }
 }
