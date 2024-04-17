@@ -308,5 +308,11 @@ public class Seeder {
         this.productRepository.save(product14);
         this.productRepository.save(product15);
         this.productRepository.save(product16);
+        this.productRepository.save(product17);
+        this.productRepository.save(product18);
+        this.productRepository.save(product19);
+        this.productRepository.save(product20);
+        this.productRepository.save(product21);
+        this.productRepository.save(product22);
     }
 }
