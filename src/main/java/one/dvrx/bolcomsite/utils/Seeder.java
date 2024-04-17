@@ -49,6 +49,21 @@ public class Seeder {
         Brand brand7 = new Brand("Focal");
         this.brandRepository.save(brand7);
 
+        Brand brand8 = new Brand("KRK");
+        this.brandRepository.save(brand8);
+
+        Brand brand9 = new Brand("Pioneer");
+        this.brandRepository.save(brand9);
+
+        Brand brand10 = new Brand("Mackie");
+        this.brandRepository.save(brand10);
+
+        Brand brand11 = new Brand("Presonus");
+        this.brandRepository.save(brand11);
+
+        Brand brand12 = new Brand("Alesis");
+        this.brandRepository.save(brand12);
+
         Category category1 = new Category("midi-keyboards");
         Category category2 = new Category("studio monitors");
         Category category3 = new Category("speakers");
@@ -156,6 +171,126 @@ public class Seeder {
                 "https://iear.nl/wp-content/uploads/2023/07/prd125697.jpg"
         );
 
+        Product product11 = new Product(
+                "Vestia N2",
+                "Een exclusieve speaker met uitstekend geluid",
+                1800.00,
+                11,
+                category3,
+                brand7,
+                "https://doublepoint.nl/media/catalog/product/cache/d64b9013a241faf05c3fcd5f3a7eae29/f/o/focal-vestia-n3-staande-luidspreker.jpeg"
+        );
+
+        Product product12 = new Product(
+                "Mania",
+                "Een exclusieve speaker die overal mee te nemen is",
+                790.00,
+                11,
+                category3,
+                brand6,
+                "https://premiumsound.com.au/wp-content/uploads/2022/11/Mania-Grey-1.jpg"
+        );
+
+        Product product13 = new Product(
+                "Rokit classic 5 (1 stuk)",
+                "Een speaker met een grote bass perfect voor producers",
+                139.00,
+                11,
+                category2,
+                brand8,
+                "https://www.huigens-webshop.nl/pub/media/catalog/product/cache/eeb355d55688b13b42e39d18ca714e29/k/r/krk_classic_5_g3_2.jpg"
+        );
+
+        Product product14 = new Product(
+                "Rokit Rp10-3 (1 stuk)",
+                "Een speaker met een grote bass perfect voor producers",
+                324.00,
+                11,
+                category2,
+                brand8,
+                "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/_45/458024/14202807_800.jpg"
+        );
+
+        Product product15 = new Product(
+                "DJ DM-40D (2 stuks)",
+                "Een speaker met een goede balans voor het producen of DJ draaien",
+                152.00,
+                11,
+                category2,
+                brand9,
+                "https://d1aeri3ty3izns.cloudfront.net/media/72/721471/600/preview.jpg"
+        );
+
+        Product product16 = new Product(
+                "CR3-X BT (2 stuks)",
+                "Een goedkopere speaker met een goede balans voor het producen of DJ draaien",
+                111.00,
+                11,
+                category2,
+                brand10,
+                "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/_48/485467/15242878_800.jpg"
+        );
+
+        Product product17 = new Product(
+                "CR4-X (2 stuks)",
+                "Een goedkopere speaker met een goede balans voor het producen of DJ draaien",
+                134.00,
+                11,
+                category2,
+                brand10,
+                "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/_48/485467/15242878_800.jpg"
+        );
+
+        Product product18 = new Product(
+                "RP5-g2 (1 stuk)",
+                "Een speaker met een uitstekende balans voor het producen of DJ draaien",
+                275.00,
+                11,
+                category2,
+                brand8,
+                "https://www.profmbroadcast.com/img/uploaded/krk-rp5-g2.jpg"
+        );
+
+        Product product19 = new Product(
+                "RP8-g4 (1 stuk)",
+                "Een speaker met veel bass en een goede balans voor het producen",
+                249.00,
+                11,
+                category2,
+                brand8,
+                "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/_45/458022/14112332_800.jpg"
+        );
+
+        Product product20 = new Product(
+                "Eris 4.5BT 2nd gen",
+                "Een goedkope speaker met een goede balans voor het producen of DJ draaien",
+                188.00,
+                11,
+                category2,
+                brand11,
+                "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/_57/572885/18689218_800.jpg"
+        );
+
+        Product product21 = new Product(
+                "Eris 3.5BT 2nd gen",
+                "Een goedkope speaker met een goede balans voor het producen of DJ draaien",
+                89.00,
+                11,
+                category2,
+                brand11,
+                "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/_57/572877/18550693_800.jpg"
+        );
+
+        Product product22 = new Product(
+                "Elevate 5 MKII",
+                "Een speaker met een goede balans voor het producen of DJ draaien",
+                139.00,
+                11,
+                category2,
+                brand12,
+                "https://7132afa424c2f1a2ab6d-54d68a14e2e7c1f76563a2d8c3e9fd82.ssl.cf2.rackcdn.com/961/images/elevate5_angle_1200x750_lg-1.jpg"
+        );
+
 
         this.productRepository.save(product1);
         this.productRepository.save(product2);
@@ -167,5 +302,11 @@ public class Seeder {
         this.productRepository.save(product8);
         this.productRepository.save(product9);
         this.productRepository.save(product10);
+        this.productRepository.save(product11);
+        this.productRepository.save(product12);
+        this.productRepository.save(product13);
+        this.productRepository.save(product14);
+        this.productRepository.save(product15);
+        this.productRepository.save(product16);
     }
 }
