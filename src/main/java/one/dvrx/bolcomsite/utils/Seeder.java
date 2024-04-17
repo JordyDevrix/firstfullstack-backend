@@ -81,7 +81,7 @@ public class Seeder {
                 "Een klein keyboard handig voor onderweg",
                 54.00,
                 6,
-                category2,
+                category1,
                 brand1,
                 "https://static.bax-shop.nl/image/product/1021882/3865776/47d49077/1664458409akai_LPK25_mk2_01.jpg"
         );
