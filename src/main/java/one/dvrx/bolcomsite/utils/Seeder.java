@@ -111,7 +111,7 @@ public class Seeder {
                 "Een uitstekende speakers voor in huis",
                 16000.00,
                 11,
-                category2,
+                category3,
                 brand4,
                 "https://iear.nl/wp-content/uploads/2023/07/prd125826-1024x822.jpg"
         );
@@ -121,7 +121,7 @@ public class Seeder {
                 "Een exclusieve speaker voor de echte audiofiel",
                 999.00,
                 11,
-                category2,
+                category3,
                 brand6,
                 "https://bartelstilburg.nl/wp-content/uploads/2021/02/Phantom-Il-95db-5.png"
         );
@@ -131,7 +131,7 @@ public class Seeder {
                 "Een exclusieve speaker voor de echte audiofiel",
                 100000.00,
                 11,
-                category2,
+                category3,
                 brand4,
                 "https://audiosolutions.net.au/wp-content/uploads/2023/10/bowers_wilkins_Nautilus-White-Beauty-1.jpg"
         );
@@ -141,7 +141,7 @@ public class Seeder {
                 "Een exclusieve speaker voor de echte audiofiel",
                 249998.00,
                 11,
-                category2,
+                category3,
                 brand7,
                 "https://www.overtureav.com/wp-content/uploads/2021/10/stella-blue.jpg"
         );
@@ -151,7 +151,7 @@ public class Seeder {
                 "Een exclusieve speaker voor de echte audiofiel",
                 27500.00,
                 11,
-                category2,
+                category3,
                 brand4,
                 "https://iear.nl/wp-content/uploads/2023/07/prd125697.jpg"
         );
