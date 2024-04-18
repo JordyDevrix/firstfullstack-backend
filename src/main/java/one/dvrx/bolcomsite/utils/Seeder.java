@@ -78,7 +78,7 @@ public class Seeder {
                 34,
                 category1,
                 brand1,
-                "https://m.media-amazon.com/images/I/717qmGlA7ZL._AC_UF894,1000_QL80_.jpg"
+                "https://i.imgur.com/1qqOHk4.png"
         );
 
         Product product2 = new Product(
@@ -88,7 +88,7 @@ public class Seeder {
                 39,
                 category1,
                 brand5,
-                "https://media.s-bol.com/46XG70m3KR21/EyWvL0/550x228.jpg"
+                "https://i.imgur.com/UXIdFSp.png"
         );
 
         Product product3 = new Product(
@@ -98,7 +98,7 @@ public class Seeder {
                 6,
                 category1,
                 brand1,
-                "https://static.bax-shop.nl/image/product/1021882/3865776/47d49077/1664458409akai_LPK25_mk2_01.jpg"
+                "https://i.imgur.com/Wf8TllZ.png"
         );
 
         Product product4 = new Product(
@@ -108,7 +108,7 @@ public class Seeder {
                 11,
                 category1,
                 brand3,
-                "https://m.media-amazon.com/images/I/81rPqm+Wl6S._AC_UF894,1000_QL80_.jpg"
+                "https://i.imgur.com/dSIaTpm.png"
         );
 
         Product product5 = new Product(
@@ -118,7 +118,7 @@ public class Seeder {
                 11,
                 category1,
                 brand1,
-                "https://m.media-amazon.com/images/I/71wPxxzlLHL._AC_UF894,1000_QL80_.jpg"
+                "https://i.imgur.com/jEQwW2G.png"
         );
 
         Product product6 = new Product(
@@ -128,7 +128,7 @@ public class Seeder {
                 11,
                 category3,
                 brand4,
-                "https://iear.nl/wp-content/uploads/2023/07/prd125826-1024x822.jpg"
+                "https://i.imgur.com/0wwNxgB.png"
         );
 
         Product product7 = new Product(
@@ -138,7 +138,7 @@ public class Seeder {
                 11,
                 category3,
                 brand6,
-                "https://bartelstilburg.nl/wp-content/uploads/2021/02/Phantom-Il-95db-5.png"
+                "https://i.imgur.com/FOlMPKs.png"
         );
 
         Product product8 = new Product(
@@ -148,7 +148,7 @@ public class Seeder {
                 11,
                 category3,
                 brand4,
-                "https://audiosolutions.net.au/wp-content/uploads/2023/10/bowers_wilkins_Nautilus-White-Beauty-1.jpg"
+                "https://i.imgur.com/tC66CIE.png"
         );
 
         Product product9 = new Product(
@@ -158,7 +158,7 @@ public class Seeder {
                 11,
                 category3,
                 brand7,
-                "https://www.overtureav.com/wp-content/uploads/2021/10/stella-blue.jpg"
+                "https://i.imgur.com/ghyWJ0s.png"
         );
 
         Product product10 = new Product(
@@ -168,7 +168,7 @@ public class Seeder {
                 11,
                 category3,
                 brand4,
-                "https://iear.nl/wp-content/uploads/2023/07/prd125697.jpg"
+                "https://i.imgur.com/vezBZIT.png"
         );
 
         Product product11 = new Product(
@@ -178,7 +178,7 @@ public class Seeder {
                 11,
                 category3,
                 brand7,
-                "https://doublepoint.nl/media/catalog/product/cache/d64b9013a241faf05c3fcd5f3a7eae29/f/o/focal-vestia-n3-staande-luidspreker.jpeg"
+                "https://i.imgur.com/9jtNwGr.png"
         );
 
         Product product12 = new Product(
@@ -188,7 +188,7 @@ public class Seeder {
                 11,
                 category3,
                 brand6,
-                "https://premiumsound.com.au/wp-content/uploads/2022/11/Mania-Grey-1.jpg"
+                "https://i.imgur.com/SdJwhQQ.png"
         );
 
         Product product13 = new Product(
@@ -198,7 +198,7 @@ public class Seeder {
                 11,
                 category2,
                 brand8,
-                "https://www.huigens-webshop.nl/pub/media/catalog/product/cache/eeb355d55688b13b42e39d18ca714e29/k/r/krk_classic_5_g3_2.jpg"
+                "https://i.imgur.com/W2NTS2x.png"
         );
 
         Product product14 = new Product(
@@ -208,7 +208,7 @@ public class Seeder {
                 11,
                 category2,
                 brand8,
-                "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/_45/458024/14202807_800.jpg"
+                "https://i.imgur.com/iQetgXE.png"
         );
 
         Product product15 = new Product(
@@ -218,7 +218,7 @@ public class Seeder {
                 11,
                 category2,
                 brand9,
-                "https://d1aeri3ty3izns.cloudfront.net/media/72/721471/600/preview.jpg"
+                "https://i.imgur.com/x3Yapjb.png"
         );
 
         Product product16 = new Product(
@@ -228,7 +228,7 @@ public class Seeder {
                 11,
                 category2,
                 brand10,
-                "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/_48/485467/15242878_800.jpg"
+                "https://i.imgur.com/NXtwOrf.png"
         );
 
         Product product17 = new Product(
@@ -238,7 +238,7 @@ public class Seeder {
                 11,
                 category2,
                 brand10,
-                "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/_48/485467/15242878_800.jpg"
+                "https://i.imgur.com/NXtwOrf.png"
         );
 
         Product product18 = new Product(
@@ -248,7 +248,7 @@ public class Seeder {
                 11,
                 category2,
                 brand8,
-                "https://www.profmbroadcast.com/img/uploaded/krk-rp5-g2.jpg"
+                "https://i.imgur.com/Biuc4KP.png"
         );
 
         Product product19 = new Product(
@@ -258,7 +258,7 @@ public class Seeder {
                 11,
                 category2,
                 brand8,
-                "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/_45/458022/14112332_800.jpg"
+                "https://i.imgur.com/5Sgr2qV.png"
         );
 
         Product product20 = new Product(
@@ -268,7 +268,7 @@ public class Seeder {
                 11,
                 category2,
                 brand11,
-                "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/_57/572885/18689218_800.jpg"
+                "https://i.imgur.com/rrOyVoR.png"
         );
 
         Product product21 = new Product(
@@ -278,7 +278,7 @@ public class Seeder {
                 11,
                 category2,
                 brand11,
-                "https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/_57/572877/18550693_800.jpg"
+                "https://i.imgur.com/i0vo0wp.png"
         );
 
         Product product22 = new Product(
@@ -288,7 +288,7 @@ public class Seeder {
                 11,
                 category2,
                 brand12,
-                "https://7132afa424c2f1a2ab6d-54d68a14e2e7c1f76563a2d8c3e9fd82.ssl.cf2.rackcdn.com/961/images/elevate5_angle_1200x750_lg-1.jpg"
+                "https://i.imgur.com/Mfqder4.png"
         );
 
 
